@@ -1,0 +1,71 @@
+===========
+iupac_parse
+===========
+
+
+USAGE: ruby ./generateNmr.rb ALKANE [OPTIONS]
+  Predict the 1H NMR spectra for a given alkane.
+
+  Arguments:
+    ALKANE                 A valid alkane name as defined under IUPAC 
+                             nomenclature. (Nomenclature rules available at
+                             <http://www.acdlabs.com/iupac/nomenclature/>)
+ 
+  Options:
+    -v, --verbose          Verbose output.
+    -h, --help             Print this message.
+    -d, --debug            Run in debugging mode
+    -s, --structure        Generate Structure diagrams as well
+
+
+  Examples:
+    $ ruby ./generateNmr.rb methane
+    $ ruby ./generateNmr.rb "3-ethylhexane"
+    $ ruby ./generateNmr.rb "4-(1,1-dimethylpropyl)-decane"
+    $ ruby ./generateNmr.rb "hexane" "3-methylhexane"
+
+
+  Notes:
+    1. Except for simple straight chain alkanes, the alkane name should be
+       enclosed in quotes to ensure it is not subject to shell substitution.
+    2. Common and 'trivial' names (such as isopropyl, tert-butyl-, etc) are
+       not permitted.  Only systematic names are correctly parsed.
+    3. Maximum backbone chain length is 20 carbons.
+    4. This program only calculates peak splitting patterns and areas.  It does
+       not attempt to predict chemical shift values.
+    5. Several alkanes may be processed at once by listing them as shown in
+       example 4 (above).
+    6. Structure diagrams are for testing purposes only.
+ 
+  Please report bugs to <bugs@davidrosenberg.me>.
+
+
+
+
+========
+Manifest
+========
+
+README                   -- This document
+TODO                     -- Notes to myself on what can be improved
+.git/                    -- Revision control information
+iupac_language.ebnf      -- Language definition for IUPAC nomenclature
+parseIupac.rb            -- Ruby script for parsing IUPAC nomenclature into
+                            a ruby object
+tc_parseIupac.rb         -- Unit tests for parseIupac.rb
+scoreCarbon.rb           -- Ruby script for classifying alkane carbons by
+                            mangnetic environment
+tc_scoreCarbon.rb        -- Unit tests for scoreCarbon.rb
+printOutput.rb           -- Ruby script for generating expected 1H NMR spectra
+                            from alkane structures
+tc_printOutput.rb        -- Unit tests for printOutput.rb
+generateNmr.rb           -- Command-line utility taking an alkane name as its
+                            first argument and printing the expected 1H NMR
+                            spectra to STDOUT.
+tc_generateNmr.rb        -- Unit tests for generateNmr.rb
+ts_iupac_parse.rb        -- Test suite running all unit test cases.
+drawStructure.rb         -- Ruby script for 'drawing' the parsed structure
+                            using ascii art
+tc_drawStructure.rb      -- Unit tests for drawStructure.rb
+
+

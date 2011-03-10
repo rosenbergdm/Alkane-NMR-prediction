@@ -1,0 +1,20 @@
+
+numericPrefix = 'di' | 'tri' | 'tetra' | 'penta' | 'hexa' | 'hepta' | 'nona' |
+                'deca';
+cChainPrefix  = 'meth' | 'eth' | 'prop' | 'but' | 'pent' | 'hex' | 'hept' |
+                'oct' | 'non' | 'dec';
+sideChain     = numbers, '-', { sideChain }, [ numericPrefix ], cChainPrefix,
+                'yl'; |
+numbers       = num {',' number };
+number        = '1', '2', '3', '4', '5', '6', '7', '8', '9';
+fullChain     = { sideChain } , cChainPrefix, 'ane';
+
+
+2,3-dimethylpentanane
+
+4-(2,2-dimethyl)-heptane
+
+3-methyl-3-ethylhexane
+
+2,3-methyl-3-propylhexane
+

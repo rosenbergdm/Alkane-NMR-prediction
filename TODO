@@ -1,0 +1,8 @@
+Todo items
+==========
+1. Add exception handling to the user-facing interface.
+2. Remove / refactor / rework Classes in the parsing functions
+3. Add better user help (print prefixes, hexane names, etc)
+4. Test cases for printOutput
+5. Grep for TODOs in other files.
+6.
