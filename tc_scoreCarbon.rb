@@ -2,9 +2,9 @@
 # encoding: utf-8
 # tc_scoreCarbon.rb
 
-require "scoreCarbon"
+require_relative "scoreCarbon"
 require "test/unit"
-require "parseIupac"
+require_relative "parseIupac"
 
 class TestScoreCarbon < Test::Unit::TestCase
   

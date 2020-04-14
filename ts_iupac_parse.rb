@@ -3,9 +3,9 @@
 # ts_iupac_parse.rb
 
 require "test/unit"
-require "tc_parseIupac"
-require "tc_scoreCarbon"
-require "tc_printOutput"
-require "tc_generateNmr"
-require "tc_drawStructure"
+require_relative "tc_parseIupac"
+require_relative "tc_scoreCarbon"
+require_relative "tc_printOutput"
+require_relative "tc_generateNmr"
+require_relative "tc_drawStructure"
 

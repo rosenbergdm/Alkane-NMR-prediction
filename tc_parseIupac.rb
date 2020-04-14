@@ -2,7 +2,7 @@
 # encoding: utf-8
 # tc_parseIupac.rb
 
-require "parseIupac"
+require_relative "parseIupac"
 require "test/unit"
 
 class TestParseIupac < Test::Unit::TestCase

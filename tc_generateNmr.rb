@@ -2,10 +2,10 @@
 # encoding: utf-8
 # tc_generateNmr.rb
 
-require "parseIupac"
-require "scoreCarbon"
-require "printOutput"
-require "generateNmr"
+require_relative "parseIupac"
+require_relative "scoreCarbon"
+require_relative "printOutput"
+require_relative "generateNmr"
 require "test/unit"
 
 class TestGenerateNmr < Test::Unit::TestCase

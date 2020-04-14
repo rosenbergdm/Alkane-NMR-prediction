@@ -2,8 +2,8 @@
 # encoding: utf-8
 # tc_generateNmr.rb
 
-require "parseIupac"
-require "drawStructure"
+require_relative "parseIupac.rb"
+require_relative "drawStructure.ruby"
 require "test/unit"
 
 class TestDrawStructure < Test::Unit::TestCase

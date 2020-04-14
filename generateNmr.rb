@@ -2,10 +2,10 @@
 # encoding: utf-8
 # generateNmr.rb
 
-require "parseIupac.rb"
-require "scoreCarbon.rb"
-require "printOutput.rb"
-require "drawStructure"
+require_relative "parseIupac.rb"
+require_relative "scoreCarbon.rb"
+require_relative "printOutput.rb"
+require_relative "drawStructure"
 
 def iupacToNmr(input_string)
   begin 

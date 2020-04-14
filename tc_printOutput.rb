@@ -2,9 +2,9 @@
 # encoding utf-8
 # tc_printOutput.rb
 
-require "parseIupac"
-require "scoreCarbon"
-require "printOutput"
+require_relative "parseIupac"
+require_relative "scoreCarbon"
+require_relative "printOutput"
 require "test/unit"
 
 class TestPrintOutput < Test::Unit::TestCase

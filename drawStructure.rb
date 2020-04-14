@@ -2,7 +2,7 @@
 # encoding: utf-8
 # drawStructure.rb
 
-require "parseIupac"
+require_relative "parseIupac"
 
 def renderFromCarbons(carbonList)
   rendered = []
